@@ -68,19 +68,18 @@
                 me – and you probably already knew that!
                 
             </p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Placeholder for Plot 1 - Replace with your actual image -->
-                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-md">
-                    <img src="./plots/Year_1000songs.png">
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Plot 1 -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="showModal('./plots/Year_1000songs.png')">
+                    <img src="./plots/Year_1000songs.png" alt="Figure 1: The distribution of songs over several years" class="w-full h-auto object-cover">
                     <div class="p-4 text-center text-gray-600">
-                        <p>Figure 1: The distribution of songs over several years (1938 to 2025). As you can see, most of my songs are
-                            from the years 2000 'till 2010 (What I should consider my youth).</p>
+                        <p>Figure 1: The distribution of songs over several years (1938 to 2025). As you can see, most of my songs are from the years 2000 'till 2010 (What I should consider my youth).</p>
                     </div>
                 </div>
 
-                <!-- Placeholder for Plot 2 - Replace with your actual image -->
-                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-md">
-                    <img src="./plots/Language_1000songs.png">
+                <!-- Plot 2 -->
+                <div class="bg-gray-100 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="showModal('./plots/Language_1000songs.png')">
+                    <img src="./plots/Language_1000songs.png" alt="Figure 2: The many different languages of songs I like, or have a meaningful impact on my life." class="w-full h-auto object-cover">
                     <div class="p-4 text-center text-gray-600">
                         <p>Figure 2: The many different languages of songs I like, or have a meaningful impact on my life.</p>
                     </div>
@@ -90,5 +89,35 @@
             </div>
         </section>
     </div>
+
+    <!-- The Modal/Lightbox -->
+    <div id="plot-modal" class="modal flex">
+        <span class="modal-close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <!-- JavaScript for the Modal -->
+    <script>
+        const modal = document.getElementById('plot-modal');
+        const modalImage = document.getElementById('modal-image');
+
+        // Function to show the modal with the clicked image
+        function showModal(src) {
+            modal.style.display = 'flex';
+            modalImage.src = src;
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Close the modal if the user clicks anywhere outside of the image
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+    </script>
 </body>
 </html>
