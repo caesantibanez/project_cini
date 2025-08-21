@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +15,7 @@
     </style>
 </head>
 <body class="p-4 sm:p-8">
-    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-6 sm:p-10 lg:p-12">
+    <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-6 sm:p-20 lg:p-22">
         <!-- Main Header -->
         <header class="text-center mb-10">
             <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 tracking-tight leading-tight mb-2">
